@@ -42,7 +42,7 @@ client.on('ready', () => {
 //const {contatosAlertaCo2, contatosAlertaAr} = require('./src/contatosEng');
 
 //Saudações p/ iniciar chat e variáveis
-let iniciaChat = ['oi','Oi','Olá','Ola','olá','ola','Eai','eai','ei','Ei','opa','Opa','fala','Fala!','fala!','Bom dia!','bom dia!', 'Bom dia', 'bom dia', 'Boa Tarde!', 'Boa tarde', 'boa tarde!', 'boa tarde', 'Boa Noite!', 'boa noite!', 'Boa noite', 'boa noite'];
+let iniciaChat = ['!oi'/**,'Oi','Olá','Ola','olá','ola','Eai','eai','ei','Ei','opa','Opa','fala','Fala!','fala!','Bom dia!','bom dia!', 'Bom dia', 'bom dia', 'Boa Tarde!', 'Boa tarde', 'boa tarde!', 'boa tarde', 'Boa Noite!', 'boa noite!', 'Boa noite', 'boa noite**/];
 let confGestaoPt;
 let confAltura;
 
@@ -60,10 +60,10 @@ client.on('message', async msg => {
     //else if(!contact.isMyContact){
         //chat.sendMessage('Desculpe-me, mas não posso falar com quem eu não conheço.');
     //}//Menu Segurança
-    else if(msg.body ==='1'){
+    else if(msg.body ==='!1'){
         chat.sendMessage('Você selecionou a Segurança.\nAgora digite o número correspondente ao Treinamento que deseja consultar \r\n\r\n*1.1*-Autorizados PT\r\n\r\n*1.2*-Autorizados Altura\r\n\r\n*1.3*-Espaço Confinado.\r\n\r\n*1.4*-ASO.\r\n\r\n*1.5*-Dash de Território Seguro.\r\n\r\n*1.6*-Safety First.\r\n\r\n*00*-Voltar ao menu inicial');
     
-    }//Dados Segurança
+    }/**Dados Segurança
     else if(msg.body === '1.1'){
         confGestaoPt = false;
         chat.sendMessage('Por favor, digite seu ID.');
@@ -547,7 +547,7 @@ client.on('message', async msg => {
     else if (msg.body === '!buttons') {
         let button = new Buttons('Button body', [{ body: 'bt1' }, { body: 'bt2' }, { body: 'bt3' }], 'title', 'footer');
         client.sendMessage(msg.from, button);
-    }
+    }**/
     else if (msg.body === '!list') {
         let sections = [{ title: 'Selecione a área', rows: [{ title: '1', description: 'Meio Ambiente' }, { title: '2', description: 'Processo' }] }];
         let list = new List('Selecione a área que deseja consultar', 'Opções', sections, 'Menu', 'footer');

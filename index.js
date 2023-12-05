@@ -6,7 +6,7 @@ const client = new Client({
     // proxyAuthentication: { username: 'username', password: 'password' },
     puppeteer: { 
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
-        //executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',        
+        executablePath: '/usr/bin/google-chrome', // Caminho correto para o executável do Chrome
         headless: true,
     },
     authStrategy: new LocalAuth(),

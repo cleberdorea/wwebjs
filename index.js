@@ -5,7 +5,7 @@ const { Client, Location, List, Buttons, LocalAuth, MessageMedia } = require('wh
 const client = new Client({
     // proxyAuthentication: { username: 'username', password: 'password' },
     puppeteer: { 
-        args: ['--no-sandbox'],
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
         //executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',        
         headless: true,
     },
